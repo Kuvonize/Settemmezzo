@@ -41,10 +41,10 @@ if __name__=='__main__':
         
         while True:
             x=input('Vuoi continuare a giocare?(si o no): ')
-            if x[0].lower=='s':
+            if x[0].lower()=='s':
                 partita_in_corso=True
                 break
-            elif x[0].lower=='n':
+            elif x[0].lower()=='n':
                 partita_in_corso=False
                 break
             else:
