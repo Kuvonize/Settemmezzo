@@ -16,6 +16,9 @@ class Mano:
         self.carte_in_mano.append(self.mazzo.dai_carta())
         self.calcola_valore()
 
+    def svuota_mano(self):
+        self.carte_in_mano.clear()
+
     def controllo_matta(self):
         for carta in self.carte_in_mano:
             if carta.rango == 'Re' and carta.seme == 'Oro':

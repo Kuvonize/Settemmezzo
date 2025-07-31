@@ -32,7 +32,7 @@ class Gioco:
                 self.mano_giocatore.aggiungi_carta()
                 self.mano_giocatore.controllo_matta()
                 self.mano_giocatore.calcola_valore()
-                self.mostra_tutte_le_carte()
+                self.mostra_alcune_carte()
                 if self.mano_giocatore.sballato:
                     self.chiamo=False             
             elif scelta[0] == 's':

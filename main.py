@@ -20,18 +20,20 @@ if __name__=='__main__':
         giocatore.aggiungi_carta()
 
         partita=Gioco(mazzo,giocatore,banco,soldi)
-        partita.mostra_tutte_le_carte()
+        partita.mostra_alcune_carte()
         partita.puntata.punta_soldi()
         partita.chiami_o_stai()
         partita.logica_banco()
 
         partita.mostra_tutte_le_carte()
 
+
         if partita.mano_giocatore.sballato == True:
             partita.giocatore_sballato()
             partita_in_corso=False
-        elif partita.mano_banco.sballato == False:
-            partita.banco_sballato()      
+        elif partita.mano_banco.sballato == True:
+            partita.banco_sballato()
+            partita_in_corso=False      
         elif partita.mano_giocatore.calcola_valore() > partita.mano_banco.calcola_valore():
             partita.giocatore_vince()
             partita_in_corso=False
@@ -42,6 +44,8 @@ if __name__=='__main__':
         while True:
             x=input('Vuoi continuare a giocare?(si o no): ')
             if x[0].lower()=='s':
+                giocatore.svuota_mano()
+                banco.svuota_mano()
                 partita_in_corso=True
                 break
             elif x[0].lower()=='n':
