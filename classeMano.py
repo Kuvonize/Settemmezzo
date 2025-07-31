@@ -23,7 +23,7 @@ class Mano:
                 while self.matta:
                     try:
                         self.valore_matta = float(input('Hai preso la matta! Inserisci il valore della matta (da 0.5 a 7): '))
-                        if 0.5 <= self.valore_matta <= 7:
+                        if self.valore_matta==0.5 or (self.valore_matta.is_integer() and 1 <= self.valore_matta <= 7):
                             self.matta = False
                     except ValueError:
                         print('Valore non valido, riprovare.')
