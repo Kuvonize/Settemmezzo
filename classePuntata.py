@@ -29,6 +29,5 @@ class Puntata:
         print(f'Hai vinto! Soldi totali: {self.soldi_totali}')  
 
     def persa(self):
-        self.soldi_totali -= self.scommessa
         print(f'Hai perso! Soldi totali: {self.soldi_totali}')
                     
